@@ -10,13 +10,13 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 
 @protocol AppJSObjectDelegate <JSExport>
- 
+
+// 方法名和JS代码必须一一对应
 -(void)onWechatPay:(NSString *)message;
 
 @end
 
 @interface AppJSObject : NSObject<AppJSObjectDelegate>
-
 
 @property(nonatomic,weak) id<AppJSObjectDelegate> delegate;
 

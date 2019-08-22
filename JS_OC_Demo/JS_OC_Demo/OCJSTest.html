@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,18 +15,16 @@
     //  h5->app （有参数） 调用APP微信支付
     function wechatPay(){
         app.onWechatPay('wechatPayBack'); // 调用OC方法
-        onPayParameter("张三", "18899977711", "参数3", "参数4"); // 传递参数给OC,如果无参数则该段代码可以注释。
+        onPayParameter("张三", "18899977711"); // 传递参数给OC,如果无参数则该段代码可以注释。
     }
 
     // app->h5 （带参数）微信支付结果返回
     function wechatPayBack(parameter1,parameter2){
         
-        alert("支付结果" + parameter1 + parameter2 )
+        alert("支付结果:" + parameter1 + " " + parameter2 )
     }
-
-
-
 </script>
+
 </body>
 
 </html>
